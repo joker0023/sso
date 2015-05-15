@@ -1,0 +1,49 @@
+body {
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+    font-family: "宋体";
+    font-size: 14px;
+    border: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*, *:HOVER, *:ACTIVE, *:FOCUS{
+	outline: none;
+}
+.btn:FOCUS,.btn:ACTIVE:FOCUS,.btn.active:FOCUS{
+	outline: none;
+}
+a, a:FOCUS, a:ACTIVE:FOCUS, a.active:FOCUS{
+	outline: none;
+}
+input[type="file"]:FOCUS,input[type="radio"]:FOCUS,input[type="checkbox"]:FOCUS {
+	outline: none;
+}
+.clear {
+	clear: both;
+}
+
+#alert-tip{
+	height: 40px;
+	background-color: #dff0d8;
+	padding: 10px;
+	position: fixed;
+	left: 40%;
+	top: 30%;;
+	color: #777;
+	opacity: 0.9;
+	display: none;
+	z-index: 1100;
+}
+#loading {
+	position: absolute;
+	height: 64px;
+	top: 150px;
+	width: 100%;
+}
+#loading img {
+	width: 64px;
+	height: 64px;
+	display: block;
+	margin: 0 auto;
+}

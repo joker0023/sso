@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+			"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 拦截请求后缀是.do -->
+	<constant name="struts.action.extension" value="do" />
+	<!-- 上传组件配置参数 -->
+	<constant name="struts.multipart.parser" value="jakarta" />
+	<constant name="struts.multipart.maxSize" value="104857600" /> <!-- 100M -->
+
+	<package name="validation" namespace="/validation" extends="struts-default">
+	    <action name="*" class="com.jokerstation.sso.action.validation.ValidationAction" method="{1}">
+	        <result name="web_login">/WEB-INF/web/login.jsp</result>
+	        <result name="web_logout">${redirectUrl}</result>
+	        <result name="web_registered">/WEB-INF/web/registered.jsp</result>
+	        <result name="web_findpwd">/WEB-INF/web/findpwd.jsp</result>
+	        <result name="web_changepwd">/WEB-INF/web/changepwd.jsp</result>
+	        <result name="web_login_ok">${redirectUrl}</result>
+	        <result name="web_mail_confirm">/WEB-INF/web/mailconfirmresult.jsp</result>
+	    </action>
+	</package>
+</struts>
